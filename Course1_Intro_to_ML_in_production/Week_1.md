@@ -1,4 +1,27 @@
-[TOC]
+- [The Machine Learning Project Lifecycle](#the-machine-learning-project-lifecycle)
+  
+  * [Lecture 1: Welcome](#lecture-1-welcome)
+  * [Lecture 2: Steps of an ML Project](#lecture-2-steps-of-an-ml-project)
+  * [Lecture 3: Case study - speech recognition](#lecture-3-case-study---speech-recognition)
+    + [In the scoping stage](#in-the-scoping-stage)
+    + [In the Data stage](#in-the-data-stage)
+    + [In the Modeling stage](#in-the-modeling-stage)
+    + [In the Deployment stage](#in-the-deployment-stage)
+- [Deployment](#deployment)
+  
+  * [Lecture 1: Key Challenges](#lecture-1-key-challenges)
+    
+    + [Data issues](#data-issues)
+    + [Software engineering issues](#software-engineering-issues)
+    
+  * [Lecture 2: Deployment patterns](#lecture-2-deployment-patterns)
+    
+    + [Patterns of deployment](#patterns-of-deployment)
+    + [Degrees of automation](#degrees-of-automation)
+    
+  * [Lecture 3: Monitoring](#lecture-3-monitoring)
+  
+    
 
 # The Machine Learning Project Lifecycle
 
