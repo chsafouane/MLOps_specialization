@@ -2,13 +2,13 @@
 
 The requirements surrounding ML infrastructure
 
-![image-20210701101230650](.\Week_1.assets\image-20210701101230650.png)
+![image-20210701101230650](../_assets/Week_1/image-20210701101230650.png)
 
 
 
 **Lecture 3: Steps of an ML Project**
 
-![image-20210701101834491](.\Week_1.assets\image-20210701101834491.png)
+![image-20210701101834491](../_assets/Week_1/image-20210701101834491.png)
 
 
 
@@ -31,7 +31,7 @@ The requirements surrounding ML infrastructure
 
 As a starting point, use some open-source code from Github and try in on the data. Performing error analysis will help you target which kind of data to collect more of, how to adapt it to the task and also how to modify the code (model). But focus on the data!
 
-![image-20210701103714869](.\Week_1.assets\image-20210701103714869.png)
+![image-20210701103714869](../_assets/Week_1/image-20210701103714869.png)
 
 When error-analysis suggests that your model is good enough, you can go to Deployment!
 
