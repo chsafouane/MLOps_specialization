@@ -95,3 +95,29 @@ AI assistance in which AI assists a human by showing her/him where to look but t
 
 Partial automation: Only cases where the algorithm is not sure are sent to a human and the human inputs can be used to further train the model.
 
+## Lecture 3: Monitoring
+
+Many people use a monitoring dashboard to monitor models. The **first steps** should be to:
+
+- Brainstorm the things that could go wrong
+
+- Brainstorm a few statistics/metrics that will detect the problem
+
+- It's ok to use many metrics initially and gradually remove the ones that you find not useful
+
+  
+
+  ![image-20210701125504567](../_assets/Week_1/image-20210701125504567.png)
+
+
+
+Deployment is an iterative process, and so is the choice of metrics to monitor
+
+![image-20210701125107907](../_assets/Week_1/image-20210701125107907.png)
+
+
+
+In the monitoring dashboard, set **threshold for alarms** and **adapt the metrics and thresholds** over time
+
+When it comes to **maintaining a model**, one can choose manual retraining (very common) or automatic retraining (mainly used in consumer software internet). Sometimes it's necessary to go to the data step first rather than goin directly to the modeling step.
+
