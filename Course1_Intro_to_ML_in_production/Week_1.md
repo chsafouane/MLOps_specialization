@@ -12,7 +12,7 @@ The requirements surrounding ML infrastructure
 
 
 
-## **Lecture 2: Steps of an ML Project**
+## Lecture 2: Steps of an ML Project
 
 ![image-20210701101834491](../_assets/Week_1/image-20210701101834491.png)
 
@@ -20,20 +20,20 @@ The requirements surrounding ML infrastructure
 
 ## Lecture 3: Case study - speech recognition
 
-### 1- In the scoping stage
+### In the scoping stage
 
 - Decide to work on speech recognition for voice search
 - Decide on key metrics
   - Accuracy, latency, throughput
 - Estimate (guestimate) resources and timeline
 
-### 2 - In the Data stage:
+### In the Data stage
 
 - Is the data labeled consistently?
 - How much silence before/after each clip?
 - How to perform volume normalization?
 
-### 3- Modeling
+### In the Modeling stage
 
 As a starting point, use some open-source code from Github and try in on the data. Performing error analysis will help you target which kind of data to collect more of, how to adapt it to the task and also how to modify the code (model). But focus on the data!
 
@@ -41,7 +41,7 @@ As a starting point, use some open-source code from Github and try in on the dat
 
 When error-analysis suggests that your model is good enough, you can go to Deployment!
 
-### 4- Deployment
+### In the Deployment stage
 
 For this example, the deployment infrastructure looked like this
 
@@ -78,4 +78,20 @@ When data changes, it's either a *gradual change* (like the introduction of new 
 ![image-20210701115011060](../_assets/Week_1/image-20210701115011060.png)
 
 There are also differences between first-time deployment and maintenance.
+
+## Lecture 2: Deployment patterns
+
+### Patterns of deployment
+
+- **Shadow mode**: When you have people doing a task, you can start using shadow mode. It means that an ML system shadows the human and runs in parallel. During this phase, the ML system's output is not used for any decisions during this phase. This phase helps in deciding whether or not the model can make some real decisions in the future.
+- **Canary deployment**: Roll out the algorithm to a small fraction (5%) of traffic initially, then monitor the system and ramp up traffic gradually.
+- **Blue green deployment**: Spin up a new prediction server (the green version), have a router switch to the new version, and in case of a problem, the router can enable a rollback very quickly. The re is no need to make a 100% switch, a gradual switch can be used.
+
+### Degrees of automation
+
+![image-20210701122213581](../_assets/Week_1/image-20210701122213581.png)
+
+AI assistance in which AI assists a human by showing her/him where to look but the human makes the decision.
+
+Partial automation: Only cases where the algorithm is not sure are sent to a human and the human inputs can be used to further train the model.
 
