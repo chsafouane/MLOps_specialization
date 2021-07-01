@@ -1,6 +1,8 @@
+[TOC]
+
 # The Machine Learning Project Lifecycle
 
-
+**MLOps** (Machine Learning Operations) is an emerging discipline, and comprises a **set of tools and principles** to support **progress through the ML project lifecycle**.
 
 ## Lecture 1: Welcome 
 
@@ -48,4 +50,32 @@ For this example, the deployment infrastructure looked like this
 ***Concept/Data drift*** example: System trained on adult voices, failed when dealing with teens voices. The data distribution changed between the training and the real world.
 
 
+
+# Deployment
+
+## Lecture 1: Key Challenges
+
+A couple of major challenges:
+
+- statistical issues
+- software engineering issues
+
+### Data issues
+
+**Data drift:** is when the inputs X distribution changes, such as when someone becomes a star and is mentioned very often
+
+**Concept drift:** When the mapping X->y changes. if someone were to make many purchases online before covid, this pattern may have been flagged but this has changed with covid and this behavior has become the norm.
+
+Houses price prediction model example:
+
+- If people starts building larger houses, this is a change in X
+- If there is an inflation, then a house with the same properties (same X) sees its price go up (change in y)
+
+When data changes, it's either a *gradual change* (like the introduction of new vocabulary in a language) or a *sudden change* (like the changes due to covid-19)
+
+### Software engineering issues
+
+![image-20210701115011060](../_assets/Week_1/image-20210701115011060.png)
+
+There are also differences between first-time deployment and maintenance.
 
