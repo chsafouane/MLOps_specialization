@@ -1,8 +1,8 @@
 # Evidently AI blog: Machine learning monitoring
 
-## Why
+These are my own notes that I took when reading the amazing  [Evidently AI Blog](https://evidentlyai.com/blog)
 
-[Evidently AI blog]: https://evidentlyai.com/blog	"Machine learning monitoring"
+## Why
 
 Neglecting life after deployment of models is a result of a lack of maturity in companies AI usage.
 
