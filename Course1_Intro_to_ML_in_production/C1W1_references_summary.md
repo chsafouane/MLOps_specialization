@@ -2,6 +2,20 @@
 
 These are my own notes that I took when reading the  [Evidently AI Blog](https://evidentlyai.com/blog)
 
+## Table of content
+
+* [Why?](#why-)
+* [Who should care?](#who-should-care-)
+* [What are we missing?](#what-are-we-missing-)
+* [What can go wrong with data?](#what-can-go-wrong-with-data-)
+* [What else can go wrong?](#what-else-can-go-wrong-)
+  
+  + [Drift definition](#drift-definition)
+  
+  + [Dealing with drift](#dealing-with-drift)
+  
+    
+
 ## Why?
 
 Neglecting life after deployment of models is a result of a lack of maturity in companies AI usage.
@@ -63,3 +77,4 @@ Models get worse over time with a different speed. This happens for a couple of 
 
 - Retrain a new model with more weights on recent data or drop past data if enough is collected.
 - Naïve retraining is not always the solution. Sometimes redefining the model scope (e.g. predictions horizon) or the business process is necessary.
+
