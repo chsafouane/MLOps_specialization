@@ -4,6 +4,20 @@ Notes taken while reading https://christophergs.com/machine%20learning/2020/03/1
 
 ------
 
+## Table of content
+
+- [Why it's hard?](#why-its-hard)
+
+- [Why monitor?](#why-monitor)
+
+- [Data science monitoring](#data-science-monitoring)
+
+- [Operations monitoring](#operations-monitoring)
+
+- [Metrics and Logs](#metrics-and-logs)
+
+  
+
 ## Why it's hard?
 
 ML systems have all the **challenges of traditional code + ML-specific challenges** as an ML system is not just code, it also includes a model and data fed to it. A change in any one component impact the other (e.g: A change in a data feature impact the output of the model)
