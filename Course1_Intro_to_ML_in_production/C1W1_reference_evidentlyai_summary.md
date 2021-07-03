@@ -22,7 +22,7 @@ Neglecting life after deployment of models is a result of a lack of maturity in 
 
 A model is never final and without performance monitoring, one can't know if the model is performant in production and when its performance starts decaying.
 
-![Machine learning model lifecycle: after model deployment comes model serving and performance monitoring.](../_assets/C1W1_references_summary/model_lifecycle_2.png)
+![Machine learning model lifecycle: after model deployment comes model serving and performance monitoring.](../_assets/C1W1_references_summary/model_lifecycle_2-1625266385330.png)
 
 Monitoring models shouldn't boil down to software engineering metrics (the health of a service from a software engineering perspective). It should include software engineering metrics, input and output data metrics, comparison to ground truth and business KPI.
 
