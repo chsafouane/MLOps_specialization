@@ -6,7 +6,7 @@ The repo contains notes of the lectures as well as my own summaries of the refer
 
 [Course 1: Introduction to Machine Learning in Production](https://www.coursera.org/learn/introduction-to-machine-learning-in-production?specialization=machine-learning-engineering-for-production-mlops)
 
-- [Week 1 notes][https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/C1W1.md]
-- [Week 2 notes](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/C1W2.md)
-- [Week 3 notes](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/C1W3.md)
+- [Week 1 notes](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W1.md)
+- [Week 2 notes](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W2.md)
+- [Week 3 notes](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W2.md)
 
