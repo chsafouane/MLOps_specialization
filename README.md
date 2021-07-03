@@ -4,6 +4,8 @@ This repo contains notes I've taken while doing the [MLOps specialization by Dee
 
 The repo contains notes of the lectures as well as my own summaries of the references listed in the course. As I'm only done with the first course in the specialization, this repo is still work in progress.
 
+I'll try to add a one-file summary (maybe in a blog post) when done with the whole specialization and all readings. It will also include my own point of view of what I get to see in industry + my discussions with people working in different fields.
+
 ------
 
 [Course 1: Introduction to Machine Learning in Production](https://www.coursera.org/learn/introduction-to-machine-learning-in-production?specialization=machine-learning-engineering-for-production-mlops)
