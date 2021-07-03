@@ -4,17 +4,17 @@ These are my own notes that I took when reading the  [Evidently AI Blog](https:/
 
 ## Table of content
 
-* [Why?](#why-)
-* [Who should care?](#who-should-care-)
-* [What are we missing?](#what-are-we-missing-)
-* [What can go wrong with data?](#what-can-go-wrong-with-data-)
-* [What else can go wrong?](#what-else-can-go-wrong-)
-  
+* [Why?](#why)
+* [Who should care?](#who-should-care)
+* [What are we missing?](#what-are-we-missing)
+* [What can go wrong with data?](#what-can-go-wrong-with-data)
+* [What else can go wrong?](#what-else-can-go-wrong)
   + [Drift definition](#drift-definition)
-  
   + [Dealing with drift](#dealing-with-drift)
+
+- [To retrain or not to retrain?](#to-retrain-or-not-to-retrain)
+
   
-    
 
 ## Why?
 
@@ -77,4 +77,37 @@ Models get worse over time with a different speed. This happens for a couple of 
 
 - Retrain a new model with more weights on recent data or drop past data if enough is collected.
 - Naïve retraining is not always the solution. Sometimes redefining the model scope (e.g. predictions horizon) or the business process is necessary.
+
+## To retrain or not to retrain?
+
+To decide whether to retrain the model, several checks need to be made. But the general **idea is simple**, **simulate the effects** that might take place while training the model. But keep in mind, simulations are as good as the resemblance between real life conditions and simulation conditions + they only give estimates. **Monitoring** is what gives a crystal clear idea.
+
+- **Check 1: How much data does the model need?** If the model hadn't reached a plateau in the previous training, add the recent data (collected while the model is deployed) to training. If it had reached a plateau in the previous training, it's time to retrain.
+
+- **Check 2: How quickly will the quality go down in production?** Simulate the process of deploying a model while training. Fix the training set and test on a test that is further in time - e.g: test on next month from the training, the month after that, etc till its performance starts decaying. That should give you a rough estimate for how much time it will take for its performance to start decaying.
+
+  ![model quality at different test sets removed in time](../../_assets/C1W1_references_summary/blog_retrain_or_not_1st.png)
+
+  
+
+  Sometimes, there is no need to retrain. The model may just need active learning or maybe it just underperforms on a specific segment of data. A fallback should be created for that particular segment.
+
+- **Check 3: How often is new data received?** If a model starts decaying after a week and new data is collected on monthly-basis, you have multiple solutions.
+
+  - Build several models, some data might be received on daily basis and some of it on monthly basis
+  - Add a fallback rule for when the model starts decaying (specially for important segment)
+  - Feature-engineer the features so that the model decays less rapidly
+
+- **Check 4: If the data comes too often, how often should we retrain the model?** This time fix the test set far in time and add recent data to the training set in a bucketed way. If the model performance becomes much much better, then you'll profit from retraining the model often. This also gives an estimate of how often you should do it.
+
+![model quality with different training sets](../../_assets/C1W1_references_summary/blog_retrain_or_not_2nd.png)
+
+​	If there is no real performance gain, just don't do it: it's energy-consuming and an error-prone operation.
+
+- **Check 5: Should you drop the old data?** This time, we have to simulate this by remove from past training data. 
+  - if dropping the old data makes the **model worse**, don't drop it. 
+  - If the **quality's not affected**, remove it (lightweight's better!).
+  - If dropping data **improves the model performance**: old patterns not that important. Drop it or use weights but pay attention to categories that might not present in the new data sample that you've just got.
+
+![model quality with gradual exclusion of older periods](../../_assets/C1W1_references_summary/blog_retrain_or_not_3rd.png)
 

@@ -18,7 +18,7 @@ I'll try to add a one-file summary (maybe in a blog post) when done with the who
 
   - ***Week 1 readings summary***: The links to all resources are listed within each markdown
 
-    - [Evidently AI blogs](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W1_reference_evidentlyai_summary.md): Only one is listed in the course but I've read all 5 parts. They're good to let first week ideas soak in.
+    - [Evidently AI blogs](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W1_reference_evidentlyai_summary.md): Only one is listed in the course but I've read all the blog posts in ML monitoring series. They're good to let first week ideas soak in.
 
     - [ChristopherGS: Monitoring Machine Learning Models in Production](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W1_reference_christophergs_summary.md): It goes into further details and touches upon the subject of tools to use.
 
