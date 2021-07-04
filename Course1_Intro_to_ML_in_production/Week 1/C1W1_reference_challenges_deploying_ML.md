@@ -1,6 +1,19 @@
-The goal of the paper is to show that **practitioners face problems** at each stage of the **ML deployment workflow** and to raise awareness with regards to this topic.
+# Challenges in Deploying Machine Learning: a Survey of Case Studies
 
-@Safouane: Some of the problems listed don't happen because of technical difficulties but also because of project scoping and lack of maturity of building and deploying AI solutions in companies.
+The goal of [the paper](https://arxiv.org/pdf/2011.09926.pdf) is to show that **practitioners face problems** at each stage of the **ML workflow** and to raise awareness with regards to this topic.
+
+*@Safouane*: Some of the problems listed don't happen because of technical difficulties but also because of project scoping and lack of maturity of building and deploying AI solutions in companies.
+
+## Table of content
+
+- [ML deployment workflow](#ml-deployment-workflow)
+- [Data management](#data-management)
+- [Model learning](#model-learning)
+- [Model deployment](#model-deployment)
+- [Cross-cutting aspects](#cross-cutting-aspects)
+- [Discussion of potential solutions](#discussion-of-potential-solutions)
+
+
 
 ## ML deployment workflow
 
@@ -26,7 +39,9 @@ The problems faced at each step are discussed + cross-cutting problems (ethics, 
 
 **Model selection:** Despite the focus on deep learning in research, industry uses less complex models because they are **easy to deploy** , don't consume that much when it comes to **resources** specially in a hardware constrained environment and usually **interpretable in business domain terms**.
 
-**Training:** Big models (e.g NLP models) training is costly ($50k->$1.6m) + Energy consumption/CO2. @Safouane: Almost no company retrains these models => use of transfer learning.
+**Training:** Big models (e.g NLP models) training is costly ($50k->$1.6m) + Energy consumption/CO2. 
+
+*@Safouane*: Almost no company retrains these models => use of transfer learning.
 
 **Hyper-parameter selection**: Optimization for hyperparameters is very expensive, specially when it comes to DL models. 
 
@@ -36,11 +51,11 @@ The problems faced at each step are discussed + cross-cutting problems (ethics, 
 
 - **Formal verification:** verify that the model functionality follow the requirements defined + regulations if any. The part pertaining to the requirements that are defined is often not done in industry.
 
-  @Safouane: In my experience, it's because the whole context of building a model includes many teams and the separation zone between teams responsibilities is often a grey zone + Data scientist often limit themselves to the technical aspect of the model but this thinking should evolve as the ML ecosystem in companies matures with time.
+  *@Safouane*: In my experience, it's because the whole context of building a model includes many teams and the separation zone between teams responsibilities is often a grey zone + Data scientist often limit themselves to the technical aspect of the model but this thinking should evolve as the ML ecosystem in companies matures with time.
 
 - **Test-based verification:** testing the model power of generalization is usually done on a subset of the training data or in a simulation environment for RL. Testing the model in a real environment is important.
 
-  @Safouane: One can use shadow or canary deployment.
+  *@Safouane*: One can use shadow or canary deployment.
 
 ## Model deployment
 
@@ -60,7 +75,7 @@ Issues in industry arise from lack of best practices when it comes to MLOps as w
 
   - **Necessity to update models** can arise for different reasons: data drift, concept drift, etc
 
-    @Safouane: Check evidentlyai blog posts for an answer for when
+    *@Safouane*: Check evidentlyai blog posts for an answer for when
 
   - **Model delivery** to a production environment and the infrastructure question: how often can it be done? Could it be automated? ML pipelines contain not only code but also models and data => Need to adapt continuous delivery philosophy to ML
 
@@ -81,5 +96,5 @@ Issues in industry arise from lack of best practices when it comes to MLOps as w
 
 Two ways to go about it, either having **specific tools/choosing a specific platform to target an ML problem** *or* opt for **holistic approaches** like rethinking the whole infrastructure (Moving from microservices to Data Oriented Architectures). This second solution is very time consuming. When it comes to the first solution, as there is a frenzy in the creation of ML solutions, it's hard to choose.
 
-@Safouane: Take a look at [this blog](https://engineering.atspotify.com/2019/12/13/the-winding-road-to-better-machine-learning-infrastructure-through-tensorflow-extended-and-kubeflow/) to see how Spotify went about it
+*@Safouane*: Take a look at [this blog](https://engineering.atspotify.com/2019/12/13/the-winding-road-to-better-machine-learning-infrastructure-through-tensorflow-extended-and-kubeflow/) to see how Spotify went about it
 
