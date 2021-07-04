@@ -22,6 +22,8 @@ I'll try to add a one-file summary (maybe in a blog post) when done with the who
 
     - [ChristopherGS: Monitoring Machine Learning Models in Production](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W1_reference_christophergs_summary.md): It goes into further details and touches upon the subject of tools to use.
 
+    - [Challenges in Deploying Machine Learning](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W1_reference_challenges_deploying_ML.md): This article discusses problems faced by practitioners at each stage of the ML workflow. At the end of the article, the authors discuss some of the solutions that exist today.
+    
       
 
 - **Week 2**
