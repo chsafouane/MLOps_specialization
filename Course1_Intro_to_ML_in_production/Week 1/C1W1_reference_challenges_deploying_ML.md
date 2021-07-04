@@ -44,3 +44,25 @@ The problems faced at each step are discussed + cross-cutting problems (ethics, 
 
 ## Model deployment
 
+Issues in industry arise from lack of best practices when it comes to MLOps as well as other reasons. Issues discussed with regards to:
+
+- **Integration:** of a model is composed of tow main activities, building the infra to run the model and implementing the model.
+
+  - Lack of reusing code, data and models internally
+  - Include researchers/data scientist (role: build models) and software engineers(build/maintain infra to run models) in the whole process. Their areas of concern overlap as there is no clear separation, so it'd better for them to work hand in hand from the start
+
+- **Monitoring**:
+
+  - Lack of understanding in ML community of the key metrics to monitor
+  - Difficulty to adapt out-of-the-box tools to everyone's specific model. ML models need custom monitoring.
+
+- **Updating:**
+
+  - **Necessity to update models** can arise for different reasons: data drift, concept drift, etc
+
+    @Safouane: Check evidentlyai blog posts for an answer for when
+
+  - **Model delivery** to a production environment and the infrastructure question: how often can it be done? Could it be automated? ML pipelines contain not only code but also models and data => Need to adapt continuous delivery philosophy to ML
+
+## Cross-cutting aspects
+
