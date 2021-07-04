@@ -66,3 +66,20 @@ Issues in industry arise from lack of best practices when it comes to MLOps as w
 
 ## Cross-cutting aspects
 
+- **Ethics:** impacts the whole pipeline from data collection to the impact of the model which might be misused either intentionally or not.
+- **End users' trust:** 
+  - Model interpretability has limits as a trust-building tool
+  - Invest time in building specialized user interfaces with tailored user experience (geared towards end-users)
+  - Using explainable models is preferred when the target audience has experience and an understanding of ML.
+  - Explainability is a must-have feature for most of the stakeholders, executives, etc
+- **Security**: Practitioners are not equipped to deal with attacks on their ML systems. Focus on 3 adversarial attacks
+  - *Data poisoning*: Corrupt integrity of training data. Happens usually when the model is trained continually with live data (e.g. Microsoft twitter bot).
+  - *Model stealing*: Reverse engineer the outcomes of a model by sending inputs through an API and getting its outputs (you get the mapping X->y). The goal is usually to build a substitute model.
+  - *Model inversion*: Recover training data by exploiting models that report confidence values along their prediction and by having access to a model (through an API for example).
+
+## Discussion of potential solutions
+
+Two ways to go about it, either having **specific tools/choosing a specific platform to target an ML problem** *or* opt for **holistic approaches** like rethinking the whole infrastructure (Moving from microservices to Data Oriented Architectures). This second solution is very time consuming. When it comes to the first solution, as there is a frenzy in the creation of ML solutions, it's hard to choose.
+
+@Safouane: Take a look at [this blog](https://engineering.atspotify.com/2019/12/13/the-winding-road-to-better-machine-learning-infrastructure-through-tensorflow-extended-and-kubeflow/) to see how Spotify went about it
+
