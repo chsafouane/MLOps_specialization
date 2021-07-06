@@ -1,6 +1,10 @@
 # Hidden Technical Debt in Machine Learning Systems
 
-The article discusses technical debt linked to ML systems and proposes solutions for some of the listed problems.
+The article discusses technical debt linked to ML systems and proposes ways of mitigating some of the problems listed.
+
+ML systems in this article are represented as follows:
+
+![image-20210706014549818](../../_assets/C1W1_references_summary/image-20210706014549818.png)
 
 ## Complex models erode boundaries
 
@@ -22,3 +26,7 @@ Software engineering practices like abstraction and modular design that creates 
 
 ## Feedback loops
 
+ML systems in some cases end up influencing their own behavior and this creates an analysis debt as it becomes difficult to predict the behavior of a certain model. This happens under tow main forms.
+
+- **Direct feedback loops**: A model influences the selection of its own future training (when online training or retraining on live data). This happens for example when the model impacts the behavior of customer (e.g: recommendation systems). Solution: Using randomization or isolating parts of data from being influenced by a given model.
+- **Hidden feedback loops**: Two systems impact each other, a change in one system leads to a change in a second one even if the two are somehow independent. Two stock market prediction models by two different companies, in case there is an improvement to one of them or a bug, it influences the bidding behavior of the other. 
