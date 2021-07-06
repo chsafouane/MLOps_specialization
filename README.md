@@ -24,6 +24,8 @@ I'll try to add a one-file summary (maybe in a blog post) when done with the who
 
     - [Challenges in Deploying Machine Learning](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W1_reference_challenges_deploying_ML.md): This article discusses problems faced by practitioners at each stage of the ML workflow. At the end of the article, the authors discuss some of the solutions that exist today.
     
+    - [Hidden Technical Debt in Machine Learning Systems](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%201/C1W1_reference_hidden_technical_debt_in_ML.md): This article lists the causes of technical debt in ML systems and proposes ways of mitigating some of them.
+    
       
 
 - **Week 2**
