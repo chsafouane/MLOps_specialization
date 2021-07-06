@@ -30,3 +30,31 @@ ML systems in some cases end up influencing their own behavior and this creates 
 
 - **Direct feedback loops**: A model influences the selection of its own future training (when online training or retraining on live data). This happens for example when the model impacts the behavior of customer (e.g: recommendation systems). Solution: Using randomization or isolating parts of data from being influenced by a given model.
 - **Hidden feedback loops**: Two systems impact each other, a change in one system leads to a change in a second one even if the two are somehow independent. Two stock market prediction models by two different companies, in case there is an improvement to one of them or a bug, it influences the bidding behavior of the other. 
+
+## ML-system anti-patterns
+
+**Glue code**: Much of the code surrounding the usage of open-source ML packages is there just to glue the rest of the system to the open-source package that is used. This glue-code is very solution dependent. This pattern should be avoided. Solution: Create a clean native solution or wrap the package into a common API.
+
+**Pipeline jungles**: A special case of glue code, the code for preparing data often becomes a jungle of joins, sampling steps, intermediate outputs. Managing these pipelines is costly. Solution: Have engineers and researchers work on the project hand in hand.
+
+**Dead experimental codepaths**: Avoid having many codepaths in your code, opt for low cyclomatic complexity and remove any unused codepaths. This should help avoiding errors and eases the task of backward compatibility.
+
+**Abstraction debt**: Lack of abstractions/right interfaces in the ML community; what is the right interface to describe a stream of data a model, a prediction?
+
+**Common smells**:
+
+- ***Multiple-Language smell***: tempting but costly (difficulty of maintenance + transferring ownership)
+- ***Prototype smell***: Prototyping environment has its own costs and if it tends to be used as production environment, that is an indicator that the production environment is brittle + results found at small scale don't always reflect the reality at full scale. Don't use the two environments interchangeably.
+
+## Configuration debt
+
+A messy configuration is hard to maintain and error-prone. A good configuration should be easy to read (visually) and modify, hard to make manual errors, possible to detect redundant settings and should undergo a full code-review and be check into a repo.
+
+## Dealing with changes in the external world
+
+As the external world is not stable, models need to be updated/changed.
+
+**Fixed thresholds in dynamic systems:** thresholds that are selected during the training phase are often manually set. If need to change => brittle and time-consuming. Better learn the thresholds (as an additional hyper-parameter)
+
+**Monitoring and testing**:
+
