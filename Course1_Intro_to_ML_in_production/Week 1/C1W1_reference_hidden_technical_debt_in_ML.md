@@ -1,10 +1,26 @@
 # Hidden Technical Debt in Machine Learning Systems
 
-The article discusses technical debt linked to ML systems and proposes ways of mitigating some of the problems listed.
+[This article](https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf) discusses technical debt linked to ML systems and proposes ways of mitigating some of the problems listed.
 
 ML systems in this article are represented as follows:
 
 ![image-20210706014549818](../../_assets/C1W1_references_summary/image-20210706014549818.png)
+
+
+
+
+
+## Table of content
+
+- [Complex models erode boundaries](#complex-models-erode-boundaries)
+- [Data Dependencies Cost More than Code Dependencies](#data-dependencies-cost-more-than-code-dependencies)
+- [Feedback loops](#feedback-loops)
+- [ML-system anti-patterns](#ml-system-anti-patterns)
+- [Configuration debt](#configuration-debt)
+- [Dealing with changes in the external world](#dealing-with-changes-in-the-external-world)
+- [Other areas of ML-related debt](#other-areas-of-ml-related-debt)
+
+
 
 ## Complex models erode boundaries
 
@@ -56,5 +72,20 @@ As the external world is not stable, models need to be updated/changed.
 
 **Fixed thresholds in dynamic systems:** thresholds that are selected during the training phase are often manually set. If need to change => brittle and time-consuming. Better learn the thresholds (as an additional hyper-parameter)
 
-**Monitoring and testing**:
+**Monitoring and testing**: Difficult to know what to monitor but some metrics should remain invariants over time
 
+- **Prediction bias**: the distribution of predicted labels should be the same as the one of observed labels in training. If the distribution changes, it might be indicative of a change in the world behavior.
+- **Action limits**: if a system does some action (e.g: make biddings), it's good to enforce action alert if some action is triggered way too much.
+- **Up-stream producers**: if any problem with upstream data, propagate the alert to the downstream ML system and to the users of the outputs of the ML system.
+
+Automatic intervention as a result of alerts should be favored to human intervention even if it might take time to set up at first.
+
+## Other areas of ML-related debt
+
+**Data testing debt**: Data should be tested (at least some sanity checks)
+
+**Reproducibility debt**: ML experiments are not that reproducible (most algorithms have some kind of randomization)
+
+**Process Management debt**: Maintaining a mature system with many interlinked models is hard in case of data blockage or error in one of them.
+
+**Cultural debt**: ML engineering (e.g. reduction of complexity, improvements in stability) should be encouraged as much as ML research (e.g. high performance)
