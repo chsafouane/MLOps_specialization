@@ -37,4 +37,10 @@ I'll try to add a one-file summary (maybe in a blog post) when done with the who
 - **Week 3**
 
   - [Week 3 notes](https://github.com/chsafouane/MLOps_specialization/blob/main/Course1_Intro_to_ML_in_production/Week%203/C1W3.md)
+  
+    
 
+[Course 2: Machine Learning Data Lifecycle in Production](https://www.coursera.org/learn/machine-learning-data-lifecycle-in-production)
+
+- **Week 1**
+  - Week 1 notes
