@@ -43,4 +43,5 @@ I'll try to add a one-file summary (maybe in a blog post) when done with the who
 [Course 2: Machine Learning Data Lifecycle in Production](https://www.coursera.org/learn/machine-learning-data-lifecycle-in-production)
 
 - **Week 1**
-  - Week 1 notes
+  - [Week 1 notes](https://github.com/chsafouane/MLOps_specialization/blob/main/Course2_ML_Data_Lifecycle_in_Production/Week1/C2W1.md)
+
